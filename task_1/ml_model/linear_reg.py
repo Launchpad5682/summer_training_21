@@ -1,4 +1,3 @@
-#!/bin/python3
 from sklearn.metrics import mean_squared_error as mse
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -23,6 +22,5 @@ print("Model coefficients: {}".format(model.coef_))
 print("Model bias: {}".format(model.intercept_))
 
 result = model.predict(X_test)
-
 
 print("MSE: {}" .format(mse(y_test, result)))

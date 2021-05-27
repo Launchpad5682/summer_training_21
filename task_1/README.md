@@ -15,4 +15,4 @@
 Model error, coefficient and intercept will be the output.<br>
 
 ---
-Medium Blog: 
+Medium Blog: https://launchpad5682.medium.com/machine-learning-on-docker-container-9443ca1781ab
