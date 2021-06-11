@@ -4,7 +4,7 @@ import numpy as np
 # https://stackoverflow.com/questions/20801015/recommended-values-for-opencv-detectmultiscale-parameters
 
 # Load Haar face cascade
-face_classifier = cv2.CascadeClassifier('../haarcascade_frontalface_default.xml')
+face_classifier = cv2.CascadeClassifier('./haarCascade/haarcascade_frontalface_default.xml')
 
 def face_extractor(image):
     gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
