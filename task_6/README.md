@@ -31,7 +31,7 @@ conda install -c conda-forge twilio
 
 ## Demo
 
-[![Demo Video]](https://www.youtube.com/embed/SxBnX_hexzs)
+[![Demo Video](https://i9.ytimg.com/vi/SxBnX_hexzs/mq2.jpg?sqp=CPTeuIYG&rs=AOn4CLARZ3KWq2CkxR-fWGjGIVyEPgDMNg)](https://www.youtube.com/embed/SxBnX_hexzs)
 ## References: <br>
 [Twilio API Blog](https://www.twilio.com/blog/send-whatsapp-message-30-seconds-python)
 
