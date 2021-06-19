@@ -4,6 +4,9 @@ import getpass
 import destroy
 import generate_dataset
 import train_model
+import face_detection
+import eventTrigger
+import sendNot
 
 os.system("clear")
 os.system("tput setaf 3")
@@ -30,6 +33,7 @@ def main():
         print("3. Verify Identity and Send Notification")
         print("4. Verify Identity and Launch Infrastructure")
         print("5. Destroy the Infrastructure")
+        print("6. Exit")
 
         menu_option = int(input("Enter the option: "))
 
@@ -50,14 +54,25 @@ def main():
             train_model.model_train(data_path=path, save_path=save_path)
 
         elif menu_option == 3:
-            pass
+            # sending notification using face 1
+            face_detection.face_detection(model_path='./models/face_model_1.yml', trigger=sendNot.trigger,
+                                          mail_text='Hello this is mail', whatsapp_text='Hello this is whatsapp message')
+
+        elif menu_option == 4:
+            # triggering infrastructure launch using face 2
+            face_detection.face_detection(
+                model_path='./models/face_model_2.yml', trigger=eventTrigger.terraformLaunch)
 
         elif menu_option == 5:
             # destory infrastructure
             destroy.destroyInfra()
 
+        elif menu_option == 6:
+            exit()
+
         else:
-            pass
+            input("Invalid Value, Press Enter to Continue")
+            continue
 
 
 main()
