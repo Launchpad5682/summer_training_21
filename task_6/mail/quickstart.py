@@ -17,7 +17,7 @@ SCOPES = ['https://www.googleapis.com/auth/gmail.readonly',
           'https://www.googleapis.com/auth/gmail.send']
 
 
-### creating message
+# creating message
 def create_message(sender, to, subject, message_text):
     """Create a message for an email.
 
@@ -40,6 +40,7 @@ def create_message(sender, to, subject, message_text):
     message = bytes(message, 'utf-8')
     # sending the base64.urlsafe_b64encode data in decoded format to the message.send()
     return {'raw': base64.urlsafe_b64encode(message).decode()}
+
 
 """
 This was creating error while execution
@@ -68,7 +69,8 @@ def send_message(service, user_id, message):
     
 """
 
-def main():
+
+def main(message_text):
     """Shows basic usage of the Gmail API.
     Lists the user's Gmail labels.
     """
@@ -107,7 +109,7 @@ def main():
         to = "launchpad5682@gmail.com"
         sender = "saurabh22suthar@gmail.com"
         subject = "This is a system generated mail"
-        message_text = "Hello, this is the message text"
+        #message_text = "Hello, this is the message text"
 
         message = create_message(sender=sender, to=to,
                                  subject=subject, message_text=message_text)
@@ -115,10 +117,12 @@ def main():
         message = service.users().messages().send(
             userId="me", body=message).execute()
         print(message)
+        return None
 
 
+"""
 if __name__ == '__main__':
     main()
+"""
 
-
-### future scope add the exception handling to the code
+# future scope add the exception handling to the code
