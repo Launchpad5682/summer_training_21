@@ -15,3 +15,6 @@ def whatsAppNot(message):
     whatsapp.sendWhatsApp(message)
 
 
+def trigger(mail_text, whatsapp_text):
+    emailNot(message=mail_text)
+    whatsAppNot(message=whatsapp_text)
