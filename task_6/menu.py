@@ -56,7 +56,7 @@ def main():
         elif menu_option == 3:
             # sending notification using face 1
             face_detection.face_detection(model_path='./models/face_model_1.yml', trigger=sendNot.trigger,
-                                          mail_text='Hello this is mail', whatsapp_text='Hello this is whatsapp message')
+                                          mail_text='Hello Saurabh, Thanks for using face detection', whatsapp_text='Hello Saurabh, Thanks for using face detection')
 
         elif menu_option == 4:
             # triggering infrastructure launch using face 2
