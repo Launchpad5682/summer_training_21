@@ -1,16 +1,22 @@
 function remoteCommand(cmd) {
-  if (cmd === "docker run" || cmd === "docker exec") {
+  if (cmd === "docker run" || cmd === "docker exec" || cmd === "docker rm -f") {
     // detached mode
     container_name = prompt("Name of the container: ");
     if (cmd === "docker run") {
       // AJAX call
       image = prompt("Enter the image name: ");
-      console.log(cmd + " " + "-it " + image + " --name " + container_name);
+      cmd = cmd + " " + "-dt " + " --name " + container_name + " " + image;
+      console.log(cmd);
+      commandCall(cmd);
     } else if (cmd === "docker rm -f") {
-      console.log(cmd + " " + container_name);
+      cmd = cmd + " " + container_name;
+      console.log(cmd);
+      commandCall(cmd);
     } else {
       command = prompt("Enter the command: ");
-      console.log(cmd + " " + container_name + " " + command);
+      cmd = cmd + " " + container_name + " " + command;
+      console.log(cmd);
+      commandCall(cmd);
     }
   } else {
     // directly call the option
