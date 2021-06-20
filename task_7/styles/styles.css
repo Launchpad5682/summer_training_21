@@ -56,11 +56,18 @@
 }
 
 #textfield {
-  border: 2px solid black;
+  /*border: 2px solid black;*/
+  border: none;
   height: 90%;
   width: 95%;
   display: flex;
   align-items: center;
+  background-color: transparent;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
 .outputarea {
