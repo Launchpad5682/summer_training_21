@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+}
+
+.screen {
+  display: flex;
+}
+
+.leftbar {
+  width: 20vw;
+  height: 100vh;
+  background-color: #132c33;
+  display: inline;
+}
+
+.logo {
+}
+
+#logoimage {
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.buttons {
+  border: 2px solid #d8e3e7;
+  color: #d8e3e7;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard {
+  height: 100vh;
+}
+
+.titlebar {
+  height: 10vh;
+  width: 80vw;
+  background-color: #126e82;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.commandbar {
+  height: 70%;
+  width: 80%;
+  background-color: #d8e3e7;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#textfield {
+  border: 2px solid black;
+  height: 90%;
+  width: 95%;
+  display: flex;
+  align-items: center;
+}
+
+.outputarea {
+  width: 80vw;
+  height: 90vh;
+  background-color: #d8e3e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outputbox {
+  height: 90%;
+  width: 90%;
+  background-color: #51c4d3;
+  border-radius: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#outputtext {
+  border: 2px solid black;
+  height: 90%;
+  width: 95%;
+}
