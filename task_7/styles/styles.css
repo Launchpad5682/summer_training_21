@@ -30,6 +30,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
+  font-family: sans-serif;
 }
 
 .dashboard {
@@ -63,6 +65,8 @@
   display: flex;
   align-items: center;
   background-color: transparent;
+  font-size: 20px;
+  font-family: sans-serif;
 }
 
 textarea:focus,
@@ -92,7 +96,9 @@ input:focus {
 }
 
 #outputtext {
-  border: 2px solid black;
+  /*border: 2px solid black; for visual clarity*/ 
   height: 90%;
   width: 95%;
+  font-size: 15px;
+  font-family: sans-serif;
 }
