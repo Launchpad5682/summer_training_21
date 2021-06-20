@@ -9,26 +9,42 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <script src=""></script>
+    <script src="./script/script.js"></script>
     <div class="screen">
       <div class="leftbar">
         <div class="logo">
           <img id="logoimage" src="./logo/docker.svg" alt="docker logo" />
         </div>
-        <div class="buttons">docker images</div>
-        <div class="buttons">docker images</div>
-        <div class="buttons">docker images</div>
-        <div class="buttons">docker images</div>
+        <div class="buttons" onclick="remoteCommand('docker images')">
+          docker images
+        </div>
+        <div class="buttons" onclick="remoteCommand('docker ps')">
+          docker ps
+        </div>
+        <div class="buttons" onclick="remoteCommand('docker ps -a')">
+          docker ps -a
+        </div>
+        <div class="buttons" onclick="remoteCommand('docker run')">
+          docker run
+        </div>
+        <div class="buttons" onclick="remoteCommand('docker rm -f')">
+          docker rm -f
+        </div>
+        <div class="buttons" onclick="remoteCommand('docker exec')">
+          docker exec
+        </div>
       </div>
       <div class="dashboard">
         <div class="titlebar">
           <div class="commandbar">
-            <div id="textfield">docker images</div>
+            <input id="textfield" onkeydown="typedCommand(event)"></input>
           </div>
         </div>
         <div class="outputarea">
           <div class="outputbox">
-            <div id="outputtext">Text</div>
+            <div id="outputtext">
+              <pre id="text"></pre>
+            </div>
           </div>
         </div>
       </div>
