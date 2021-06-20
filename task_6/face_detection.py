@@ -36,8 +36,9 @@ def face_detection(model_path, trigger, mail_text=None, whatsapp_text=None):
 
             # Pass face to prediction model
             # "results" comprises of a tuple containing the label and the confidence value
+            # this can referred https://stackoverflow.com/questions/39010477/confidence-in-opencv-facerecognizer-predict-method-output
+            # it returns labels(number of users in camera view) and confidence, higher the number worse is the detection
             results = face_model.predict(face)
-            # harry_model.predict(face)
 
             if results[1] < 500:
                 confidence = int(100 * (1 - (results[1])/400))
@@ -50,7 +51,7 @@ def face_detection(model_path, trigger, mail_text=None, whatsapp_text=None):
                 cv2.putText(image, "Hey user", (250, 450),
                             cv2.FONT_HERSHEY_COMPLEX, 1, (0, 255, 0), 2)
                 cv2.imshow('Face Recognition', image)
-                cv2.waitKey(50)
+                cv2.waitKey(1000)  # window was crashing too quickly
                 capture.release()
                 cv2.destroyAllWindows()
                 # calling sending notification when it is face 1
